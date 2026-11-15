@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get Mushaf — The complete Quran with Urdu, in one free offline file</title>
-<meta name="description" content="Free offline Quran: full Arabic text, word-by-word Urdu meanings, and 14 Urdu translations and tafsirs in a single file. Download once, open in any browser. No ads, no sign-up.">
+<meta name="description" content="Free offline Quran: full Arabic text, word-by-word Urdu meanings, and 14 Urdu translations and tafsirs in a single file. Fully responsive on phone, tablet and computer. Download once, open in any browser. No ads, no sign-up.">
 <link rel="canonical" href="https://getmushaf.com/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta name="theme-color" content="#0c3b36">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Get Mushaf">
 <meta property="og:title" content="The complete Quran with Urdu, in one free offline file">
-<meta property="og:description" content="Arabic text, word-by-word Urdu meanings, 14 Urdu translations and tafsirs. Download once, read anywhere. No ads, no sign-up.">
+<meta property="og:description" content="Arabic text, word-by-word Urdu meanings, 14 Urdu translations and tafsirs. Works on phone, tablet and computer. Download once, read anywhere. No ads, no sign-up.">
 <meta property="og:url" content="https://getmushaf.com/">
 <meta property="og:image" content="https://getmushaf.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -104,6 +104,10 @@
   .split { display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:center; }
   .split .pic { border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#fff; }
   .split p { color:var(--muted); }
+  .split.rev { grid-template-columns:.8fr 1.2fr; }
+  .phone { width:min(300px,78vw); margin:0 auto; padding:10px; border-radius:42px; background:linear-gradient(160deg,#17302c,#071916); box-shadow:var(--shadow), 0 0 0 1px rgba(201,165,87,.5); position:relative; }
+  .phone::before { content:""; position:absolute; top:18px; left:50%; width:64px; height:6px; margin-left:-32px; border-radius:6px; background:rgba(7,25,22,.55); z-index:1; }
+  .phone img { border-radius:32px; max-height:560px; width:100%; object-fit:cover; object-position:top; }
   .ticks { list-style:none; padding:0; margin:18px 0 0; }
   .ticks li { padding-left:30px; position:relative; margin:9px 0; }
   .ticks li::before { content:""; position:absolute; left:0; top:.42em; width:16px; height:16px; border-radius:50%; background:var(--gold); -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 100 16A8 8 0 008 0zm3.7 6.2l-4.2 4.6a.8.8 0 01-1.1 0L4.3 8.7a.8.8 0 011.1-1.1l1.5 1.5 3.6-4a.8.8 0 011.2 1.1z'/%3E%3C/svg%3E") center/contain no-repeat; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0a8 8 0 100 16A8 8 0 008 0zm3.7 6.2l-4.2 4.6a.8.8 0 01-1.1 0L4.3 8.7a.8.8 0 011.1-1.1l1.5 1.5 3.6-4a.8.8 0 011.2 1.1z'/%3E%3C/svg%3E") center/contain no-repeat; }
@@ -155,7 +159,8 @@
     @keyframes rise { to { opacity:1; transform:none; } }
   }
   @media (max-width:860px) {
-    .split { grid-template-columns:1fr; gap:28px; }
+    .split, .split.rev { grid-template-columns:1fr; gap:28px; }
+    .split.rev .phone { order:2; }
     .grid { grid-template-columns:1fr 1fr; }
     .library, .steps { grid-template-columns:1fr; }
     .steps { gap:30px; }
@@ -189,7 +194,7 @@
     <div class="hero-body">
       <div class="kicker rise">Quran Fahm Mushaf</div>
       <h1 class="rise d1">The whole Quran.<br><em>One file. Yours forever.</em></h1>
-      <p class="lede rise d2">Arabic text, <strong>word-by-word Urdu meanings</strong>, and <strong>14 Urdu translations and tafsirs</strong>, all inside a single file. Download it once and read anywhere, even with no internet.</p>
+      <p class="lede rise d2">Arabic text, <strong>word-by-word Urdu meanings</strong>, and <strong>14 Urdu translations and tafsirs</strong>, all inside a single file. Download it once and read on your phone, tablet or computer, even with no internet.</p>
 
       <div class="cta rise d3">
         <a class="btn gold" href="Mushaf.html" download="Mushaf.html">
@@ -204,6 +209,7 @@
         <li>No ads</li>
         <li>No sign-up</li>
         <li>Nothing to install</li>
+        <li>Phone, tablet &amp; computer</li>
       </ul>
     </div>
   </div>
@@ -243,6 +249,23 @@
   </section>
 
   <section>
+    <div class="wrap split rev">
+      <div class="phone"><img src="assets/phone.webp" width="500" height="1040" loading="lazy" alt="The Mushaf on a phone-sized screen: the same header, controls, Arabic ayah, word-by-word Urdu table and translation, rearranged to fit a narrow display."></div>
+      <div>
+        <div class="eyebrow">Phone, tablet, laptop</div>
+        <h2>At home on every screen.</h2>
+        <p>The Mushaf reshapes itself to whatever you hold. On a small phone the ayahs, word tables and controls re-flow to fit, with nothing cut off and no sideways scrolling. On a large monitor it opens out into a spacious page.</p>
+        <ul class="ticks">
+          <li>Reads just as easily on a 5-inch phone as on a desktop</li>
+          <li>Buttons and menus sized for thumbs</li>
+          <li>Enlarge the Arabic or the Urdu with one tap</li>
+          <li>One file for all your devices, nothing separate to install</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="wrap">
       <div class="center">
         <div class="eyebrow">What's inside</div>
@@ -259,6 +282,11 @@
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7.5 11 12 15.5 16.5 11M4 20h16"/><path d="M3 3l18 18" opacity="0"/></svg></div>
           <h3>Works offline</h3>
           <p>Text, meanings, translations, tafsirs and fonts all live inside the file. Open it on a plane, in a village, anywhere.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.500" y="5" width="13" height="10" rx="1.500"/><path d="M6 19h6M9 15v4"/><rect x="15.500" y="9" width="6" height="11" rx="1.500"/></svg></div>
+          <h3>Fits every screen</h3>
+          <p>Fully responsive. It reads with equal ease on a small phone, a tablet or a wide monitor, with no zooming or sideways scrolling.</p>
         </div>
         <div class="feat">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4ZM16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg></div>
@@ -279,6 +307,16 @@
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3 7.9 7.5 9.5 4.500-1.6 7.5-4.900 7.5-9.500V6L12 3Z"/><path d="m9 12 2.200 2.200L15.500 10"/></svg></div>
           <h3>Private by design</h3>
           <p>No account, no ads, no sign-in. The file runs on your own device and asks nothing of you.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.500h12v17l-6-4.500-6 4.500v-17Z"/></svg></div>
+          <h3>Picks up where you left off</h3>
+          <p>It remembers your place, your chosen translation, your qari and your text sizes, so every visit continues from the last.</p>
+        </div>
+        <div class="feat">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.500 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12Z"/><circle cx="12" cy="12" r="2.800"/></svg></div>
+          <h3>Show only what you need</h3>
+          <p>Switch the Arabic, the word-by-word table and the translation on or off: Arabic alone for recitation, everything for study.</p>
         </div>
       </div>
     </div>
@@ -342,6 +380,10 @@
         <details>
           <summary>Is it really free?</summary>
           <p>Yes. There is no price, no trial, no ads and no account. Download it and it is yours to keep and to pass on.</p>
+        </details>
+        <details>
+          <summary>Does it work on a mobile phone?</summary>
+          <p>Yes. The Mushaf is fully responsive, so the layout adapts to small phones, tablets and large screens alike. Open it online in your phone's browser, or download the file and open it from your downloads.</p>
         </details>
         <details>
           <summary>Why is the file 49 MB?</summary>
